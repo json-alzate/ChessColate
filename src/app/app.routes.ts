@@ -23,10 +23,6 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/map/map.page').then( m => m.MapPage)
   },
   {
-    path: '960',
-    loadComponent: () => import('./pages/960/960.page').then( m => m.960Page)
-  },
-  {
     path: 'positions960',
     loadComponent: () => import('./pages/positions960/positions960.page').then( m => m.Positions960Page)
   },
