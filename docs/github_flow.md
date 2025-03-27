@@ -42,10 +42,11 @@ Each commit should follow a structured format, using an **emoji** to indicate it
 | 🐛 | `fix` | Bug fix | `🐛 fix: resolve email validation error` |
 | 🚀 | `perf` | Performance improvement | `🚀 perf: optimize image loading` |
 | ♻️ | `refactor` | Code improvement without changing functionality | `♻️ refactor: simplify authentication logic` |
-| 📘 | `docs` | Documentation updates | `📘 docs: update installation instructions` |
-| ⚗️ | `test` | Add or modify tests | `⚗️ test: add unit tests for login` |
+| 📝 | `docs` | Documentation updates | `📘 docs: update installation instructions` |
+| ✅ | `test` | Add or modify tests | `⚗️ test: add unit tests for login` |
 | 🔧 | `chore` | Maintenance and configuration | `🔧 chore: update dependencies` |
 | ➕ | `add` | Add new dependencies | `➕ add: add lodash` |
+| 🏗️ | `architecture` | Architectural changes | `architecture: refactor architecture` |
 
 📢 **Example commits:**
 ```bash
@@ -58,7 +59,7 @@ git commit -m "♻️ refactor: improve code structure in auth module"
 
 ## 🔧 Suggested Tools
 
-To facilitate emoji selection in commit messages, we recommend using the **Git Emoji Suggest** extension in **Visual Studio Code**.
+https://gitmoji.dev/
 
 ---
 
