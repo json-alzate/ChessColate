@@ -43,10 +43,11 @@ Each commit should follow a structured format, using an **emoji** to indicate it
 | 🚀 | `perf` | Performance improvement | `🚀 perf: optimize image loading` |
 | ♻️ | `refactor` | Code improvement without changing functionality | `♻️ refactor: simplify authentication logic` |
 | 📝 | `docs` | Documentation updates | `📘 docs: update installation instructions` |
-| ✅ | `test` | Add or modify tests | `⚗️ test: add unit tests for login` |
+| ✅ | `test` | Add or modify tests | `✅ test: add unit tests for login` |
 | 🔧 | `chore` | Maintenance and configuration | `🔧 chore: update dependencies` |
 | ➕ | `add` | Add new dependencies | `➕ add: add lodash` |
 | 🏗️ | `architecture` | Architectural changes | `architecture: refactor architecture` |
+| 🍱 | `assets` | Add or update assets | `🍱 assets: update logo` |
 
 📢 **Example commits:**
 ```bash
