@@ -37,7 +37,9 @@
               }
             ],
             "styles": ["src/global.scss", "src/theme/variables.scss"],
-            "scripts": [],
+            "scripts": [
+              "node_modules/preline/dist/index.js"
+            ],
             "browser": "src/main.ts"
           },
           "configurations": {

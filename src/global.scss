@@ -36,6 +36,12 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'preline/variants.css';
+
 .cg-wrap {
     width: 520px;
     height: 520px;

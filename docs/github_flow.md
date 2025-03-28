@@ -39,6 +39,7 @@ Each commit should follow a structured format, using an **emoji** to indicate it
 | **Emoji**  | **Type**  | **Purpose**  | **Example**  |
 |-----------|---------|-------------|-------------|
 | ✨ | `feat` | New feature | `✨ feat: add registration screen` |
+| 🚧 | `wip` | Work in progress | `🚧 wip: on data` |
 | 🐛 | `fix` | Bug fix | `🐛 fix: resolve email validation error` |
 | 🚀 | `perf` | Performance improvement | `🚀 perf: optimize image loading` |
 | ♻️ | `refactor` | Code improvement without changing functionality | `♻️ refactor: simplify authentication logic` |
