@@ -47,6 +47,7 @@ Each commit should follow a structured format, using an **emoji** to indicate it
 | ✅ | `test` | Add or modify tests | `✅ test: add unit tests for login` |
 | 🔧 | `chore` | Maintenance and configuration | `🔧 chore: update dependencies` |
 | ➕ | `add` | Add new dependencies | `➕ add: add lodash` |
+| ➖ | `remove` | Remove dependencies | `➖ remove: remove lodash` |
 | 🏗️ | `architecture` | Architectural changes | `architecture: refactor architecture` |
 | 🍱 | `assets` | Add or update assets | `🍱 assets: update logo` |
 
