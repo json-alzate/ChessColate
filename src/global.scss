@@ -41,6 +41,9 @@
 @tailwind utilities;
 
 @plugin "daisyui";
+@plugin "daisyui" {
+  themes: all;
+}
 
 .cg-wrap {
     width: 520px;

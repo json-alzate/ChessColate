@@ -50,6 +50,7 @@ Each commit should follow a structured format, using an **emoji** to indicate it
 | ➖ | `remove` | Remove dependencies | `➖ remove: remove lodash` |
 | 🏗️ | `architecture` | Architectural changes | `architecture: refactor architecture` |
 | 🍱 | `assets` | Add or update assets | `🍱 assets: update logo` |
+| 💄 | `ui` | Add or update ui styles | `💄 ui: update theme` |
 
 📢 **Example commits:**
 ```bash
