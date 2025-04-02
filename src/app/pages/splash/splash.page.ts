@@ -1,7 +1,7 @@
 import { Component, OnInit, Signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent  } from '@ionic/angular/standalone';
+import { IonContent, IonImg  } from '@ionic/angular/standalone';
 
 import { UiService} from '@services/ui.service';
 
@@ -10,7 +10,7 @@ import { UiService} from '@services/ui.service';
   templateUrl: './splash.page.html',
   styleUrls: ['./splash.page.scss'],
   standalone: true,
-  imports: [IonContent, CommonModule, FormsModule ]
+  imports: [IonContent, CommonModule, FormsModule, IonImg ]
 })
 export class SplashPage implements OnInit {
 
