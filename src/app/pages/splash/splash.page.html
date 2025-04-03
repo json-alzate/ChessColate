@@ -18,9 +18,13 @@
         <p class="ion-no-margin">deja que el ajedrez te capture</p>
       </div>
       <div class="self-center ion-margin-top">
-        <div class="radial-progress" style="--value:70;" aria-valuenow="70" role="progressbar">70%</div>
+        <div class="radial-progress" [style.--value]="percentageSync()"  [attr.aria-valuenow]="percentageSync()"  role="progressbar">
+          {{percentageSync() | number : '1.0-0'}}%
+        </div>
       </div>
-      <p class="ion-no-margin text-center text-[12px]">Sincronizando datos...</p>
+      <p class="ion-no-margin text-center text-[12px]">
+        {{ currentSyncStepDescription() }}
+      </p>
     </div>
     
   </div><!-- End of container -->
