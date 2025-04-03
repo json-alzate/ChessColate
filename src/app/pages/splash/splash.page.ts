@@ -1,4 +1,5 @@
 import { Component, OnInit, signal, Signal, computed, effect } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonImg  } from '@ionic/angular/standalone';
@@ -42,7 +43,8 @@ export class SplashPage implements OnInit {
   syncFailed = computed(() => this.syncSteps().some(step => step.failed));
 
   constructor(
-    private uiService: UiService
+    private uiService: UiService,
+    private router: Router
   ) { 
     this.theme = this.uiService.getTheme();
     effect(() => {
@@ -79,6 +81,8 @@ export class SplashPage implements OnInit {
 
   onSyncComplete() {
     console.log('Sync complete');
+    // Navigate to the home page
+    this.router.navigate(['/home']);
   }
 
   onSyncFailed() {

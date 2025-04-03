@@ -1,36 +1,62 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-
+  <div [attr.data-theme]="theme()" class="main-container ion-padding"><!-- Start of container -->
   <!-- <lib-chesscolate-lib></lib-chesscolate-lib> -->
 
   <h1 class="text-3xl font-bold underline">
     Hello world!
   </h1>
 
- 
-  <div class="mockup-code w-full">
-    <pre data-prefix="$"><code>npm i daisyui</code></pre>
-  </div>
+  <ion-list>
+    <!-- <ion-item>
+      <ion-thumbnail>
+        <img src="assets/images/icons/problem-solve.png" />
+      </ion-thumbnail>
+      <ion-label>Item 1</ion-label>
+    </ion-item> -->
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="assets/images/icons/64px/map.png" />
+      </ion-thumbnail>
+      <ion-label>Item 2</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Item 3</ion-label>
+    </ion-item>
+  </ion-list>
 
-  <div class="mockup-phone">
-    <div class="mockup-phone-camera"></div>
-    <div class="mockup-phone-display text-white grid place-content-center">It's Glowtime.</div>
-  </div>
+  <!-- <ion-card>
+    <ion-card-content>
+        <ion-img style="width: 25vw;" src="assets/images/icons/problem-solve.png" alt="The Wisconsin"></ion-img>
+        <h6>Puzzles</h6>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+        <ion-img style="width: 25vw;" src="assets/images/icons/3d-map.png" alt="The Wisconsin"></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+        <ion-img style="width: 25vw;" src="assets/images/icons/draughts.png" alt="The Wisconsin"></ion-img>
+    </ion-card-content>
+  </ion-card> -->
+
+
+  <!-- <div class="card bg-base-100 w-96 shadow-sm">
+    <figure>
+
+        <ion-img style="width: 25vw;" src="assets/images/icons/problem-solve.png" alt="The Wisconsin"></ion-img>
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">Card Title</h2>
+      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div> -->
+
+  </div><!-- End of container -->
 </ion-content>

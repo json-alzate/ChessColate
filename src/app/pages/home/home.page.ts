@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { Component, Signal } from '@angular/core';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonImg, IonList, IonThumbnail, IonLabel, IonCardContent, IonCardTitle, IonCardSubtitle, IonItem, IonCard } from '@ionic/angular/standalone';
+
+import { UiService} from '@services/ui.service';
 
 // import { ChesscolateLibComponent } from 'chesscolate-lib';
 
@@ -7,10 +9,17 @@ import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/stan
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, 
+  imports: [IonCard, IonItem, IonCardSubtitle, IonCardTitle,  IonList, IonThumbnail, IonLabel, IonCardContent, IonImg, IonHeader, IonToolbar, IonTitle, IonContent, 
     // ChesscolateLibComponent
   ],
 })
 export class HomePage {
-  constructor() {}
+
+  theme!: Signal<string>;
+
+  constructor(
+    private uiService: UiService,
+  ) {
+    this.theme = this.uiService.getTheme();
+  }
 }
