@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Signal } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+
+import { UiService} from '@services/ui.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,11 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-  constructor() {}
+
+  theme!: Signal<string>;
+  constructor(
+    private uiService: UiService
+  ) {
+    this.theme = this.uiService.getTheme();
+  }
 }

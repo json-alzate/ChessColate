@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div [attr.data-theme]="theme()" class="main-container ion-padding"><!-- Start of container -->
+
+    <div class="flex flex-col">
+      <div class="self-center ion-margin-top">
+        <ion-img class="img-chef"
+          src="assets/images/chef/24.jpg"
+          alt="The Chef"></ion-img>
+      </div>
+      <div class="self-center">
+        <ion-img class="img-cookie ion-margin-top"
+          src="assets/images/raw_icon@2x.png"
+          alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>
+      </div>
+      <div class="text-center ion-margin-bottom">
+        <h1 class="text-2xl">ChessColate</h1>
+        <p class="ion-no-margin">Juega y</p>
+        <p class="ion-no-margin">deja que el ajedrez te capture</p>
+      </div>
+      <div class="self-center ion-margin-top">
+        <div class="radial-progress" [style.--value]="percentageSync()"  [attr.aria-valuenow]="percentageSync()"  role="progressbar">
+          {{percentageSync() | number : '1.0-0'}}%
+        </div>
+      </div>
+      <p class="ion-no-margin text-center text-[12px]">
+        {{ currentSyncStepDescription() }}
+      </p>
+    </div>
+    
+  </div><!-- End of container -->
+</ion-content>

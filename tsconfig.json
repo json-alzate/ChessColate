@@ -3,6 +3,35 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@environments/*": [
+        "src/environments/*"
+      ],
+      "@utils/*": [
+        "src/app/utils/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@services/*": [
+        "src/app/services/*"
+      ],
+      "@guards/*": [
+        "src/app/guards/*"
+      ],
+      "@models/*": [
+        "src/app/models/*"
+      ],
+      "@store/*": [
+        "src/app/store/*"
+      ],
+      "@pages/*": [
+        "src/app/pages/*"
+      ],
+      "@directives/*": [
+        "src/app/directives/*"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
