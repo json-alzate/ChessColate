@@ -1,15 +1,18 @@
 import { Component, Signal } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonImg, IonList, IonThumbnail, IonLabel, IonCardContent, IonCardTitle, IonCardSubtitle, IonItem, IonCard } from '@ionic/angular/standalone';
+import { IonContent, IonList, IonThumbnail, IonLabel,  IonItem, IonImg } from '@ionic/angular/standalone';
 
 import { UiService} from '@services/ui.service';
 
 // import { ChesscolateLibComponent } from 'chesscolate-lib';
+import { HeaderSliderComponent } from '@pages/home/widgets/header-slider/header-slider.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonCard, IonItem, IonCardSubtitle, IonCardTitle,  IonList, IonThumbnail, IonLabel, IonCardContent, IonImg, IonHeader, IonToolbar, IonTitle, IonContent, 
+  imports: [IonImg, IonItem, IonList, IonThumbnail, IonLabel, IonContent, 
+    HeaderSliderComponent,
+
     // ChesscolateLibComponent
   ],
 })

@@ -6,8 +6,8 @@ import { Injectable, signal } from '@angular/core';
 export class UiService {
 
   // Signal que almacena el nombre del tema actual
-  private theme = signal<string>('light');
-  // private theme = signal<string>('dark');
+  // private theme = signal<string>('light');
+  private theme = signal<string>('coffee');
   
   /**
    * Returns the current theme.
