@@ -1,5 +1,5 @@
 import { Component, Signal } from '@angular/core';
-import { IonContent, IonIcon, MenuController } from '@ionic/angular/standalone';
+import { IonContent, IonIcon, MenuController, IonFab, IonFabButton } from '@ionic/angular/standalone';
 
 import { UiService} from '@services/ui.service';
 
@@ -10,7 +10,7 @@ import { HeaderSliderComponent } from '@pages/home/widgets/header-slider/header-
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonIcon, IonContent, HeaderSliderComponent,],
+  imports: [IonFabButton, IonFab, IonIcon, IonContent, HeaderSliderComponent,],
 })
 export class HomePage {
 
