@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -11,7 +11,7 @@ Swiper.use([Navigation, Pagination]);
   styleUrls: ['./header-slider.component.scss'],
   imports: [],
 })
-export class HeaderSliderComponent  implements OnInit {
+export class HeaderSliderComponent  implements OnInit, AfterViewInit {
 
   constructor() { }
 

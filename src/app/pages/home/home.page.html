@@ -16,16 +16,26 @@
   <!-- <lib-chesscolate-lib></lib-chesscolate-lib> -->
 
   <app-header-slider></app-header-slider>
-    <div class="ion-margin-vertical">
+    <div class="ion-margin-top">
       <app-cards-block></app-cards-block>
-      <h6>Rutinas de entrenamiento táctico</h6>
     </div>
+    <div class="ion-margin-top">
+      <h6 class="ion-no-margin">Rutinas populares</h6>
+      <app-common-slider></app-common-slider>
+    </div>
+    <div class="ion-margin-top">
+      <h6 class="ion-no-margin">Podcast</h6>
+      <app-common-slider></app-common-slider>
+    </div>
+
+
+ 
+  </div><!-- End of container -->
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button>
       <ion-icon name="menu-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  </div><!-- End of container -->
 
 </ion-content>
