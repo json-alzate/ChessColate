@@ -1,62 +1,52 @@
 <ion-content [fullscreen]="true">
+
   <div [attr.data-theme]="theme()" class="main-container ion-padding"><!-- Start of container -->
-  <!-- <lib-chesscolate-lib></lib-chesscolate-lib> -->
 
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-
-  <ion-list>
-    <!-- <ion-item>
-      <ion-thumbnail>
-        <img src="assets/images/icons/problem-solve.png" />
-      </ion-thumbnail>
-      <ion-label>Item 1</ion-label>
-    </ion-item> -->
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img src="assets/images/icons/64px/map.png" />
-      </ion-thumbnail>
-      <ion-label>Item 2</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Item 3</ion-label>
-    </ion-item>
-  </ion-list>
-
-  <!-- <ion-card>
-    <ion-card-content>
-        <ion-img style="width: 25vw;" src="assets/images/icons/problem-solve.png" alt="The Wisconsin"></ion-img>
-        <h6>Puzzles</h6>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-        <ion-img style="width: 25vw;" src="assets/images/icons/3d-map.png" alt="The Wisconsin"></ion-img>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-        <ion-img style="width: 25vw;" src="assets/images/icons/draughts.png" alt="The Wisconsin"></ion-img>
-    </ion-card-content>
-  </ion-card> -->
-
-
-  <!-- <div class="card bg-base-100 w-96 shadow-sm">
-    <figure>
-
-        <ion-img style="width: 25vw;" src="assets/images/icons/problem-solve.png" alt="The Wisconsin"></ion-img>
-    </figure>
-    <div class="card-body">
-      <h2 class="card-title">Card Title</h2>
-      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-      <div class="card-actions justify-end">
-        <button class="btn btn-primary">Buy Now</button>
+    <div class="flex flex-row" >
+      <button class="btn btn-circle" (click)="openMenu()">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+    <div class="basis-full">
+      <div class="skeleton w-full h-5">
+        &nbsp;
       </div>
     </div>
-  </div> -->
+    </div>
 
+  <!-- <lib-chesscolate-lib></lib-chesscolate-lib> -->
+
+  <app-header-slider></app-header-slider>
+    <div class="ion-margin-top">
+      <app-cards-block></app-cards-block>
+    </div>
+    <div class="ion-margin-top">
+      <h6 class="ion-no-margin">Rutinas populares</h6>
+      <app-common-slider></app-common-slider>
+    </div>
+    <div class="ion-margin-top">
+      <h6 class="ion-no-margin">Podcast</h6>
+      <app-common-slider></app-common-slider>
+    </div>
+    <div class="ion-margin-top">
+      <app-big-card></app-big-card>
+    </div>
+    <div class="ion-margin-top">
+      <h6 class="ion-no-margin">Podcast</h6>
+      <app-common-slider></app-common-slider>
+    </div>
+    <div class="ion-margin-top">
+      <h6 class="ion-no-margin">Podcast</h6>
+      <app-common-slider></app-common-slider>
+    </div>
+
+
+ 
   </div><!-- End of container -->
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>
