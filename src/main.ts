@@ -11,6 +11,7 @@ import * as allIcons from 'ionicons/icons';
 addIcons({
   'menu-outline': (allIcons as any)['menuOutline'],
   'heart-outline': (allIcons as any)['heartOutline'],
+
   // agrega los que uses...
 });
 
