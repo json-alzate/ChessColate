@@ -1,23 +1,106 @@
 <ion-app>
   <ion-menu [swipeGesture]="false" side="start" menuId="main-menu" contentId="main-content">
-    <ion-header class="ion-no-border">
-      <ion-toolbar>
 
-    Menu
-     
+    <div [attr.data-theme]="theme()" style="height: 100%; width: 100%;">
 
-      </ion-toolbar>
-    </ion-header>
+
+
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+
+          <div class="join join-vertical">
+            <!-- Google -->
+            <button class="btn btn-sm btn-primary btn-outline">
+              <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512">
+                <g>
+                  <path d="m0 0H512V512H0" fill="#fff"></path>
+                  <path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"></path>
+                  <path fill="#4285f4" d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"></path>
+                  <path fill="#fbbc02" d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"></path>
+                  <path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"></path>
+                </g>
+              </svg>
+              Login with Google
+            </button>
+
+            <button class="btn btn-sm btn-primary btn-outline">
+              Login with Email
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <ul class="menu bg-base-200 w-full rounded-box shadow-md">
+
+        <!-- <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li> -->
+
+        <li >
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/chess-board.png" />
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold">Coordenadas</div>
+           </div>
+          </div>
+        </li>
+
+        <li >
+          <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/4@94.webp" /></div>
+          <div>
+            <div>Ellie Beilish</div>
+            <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
+          </div>
+          <button class="btn btn-square btn-ghost">
+            <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+                <path d="M6 3L20 12 6 21 6 3z"></path>
+              </g>
+            </svg>
+          </button>
+          <button class="btn btn-square btn-ghost">
+            <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                </path>
+              </g>
+            </svg>
+          </button>
+        </li>
+
+        <li >
+          <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/3@94.webp" /></div>
+          <div>
+            <div>Sabrino Gardener</div>
+            <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
+          </div>
+          <button class="btn btn-square btn-ghost">
+            <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+                <path d="M6 3L20 12 6 21 6 3z"></path>
+              </g>
+            </svg>
+          </button>
+          <button class="btn btn-square btn-ghost">
+            <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                </path>
+              </g>
+            </svg>
+          </button>
+        </li>
+
+      </ul>
+    </div>
   </ion-menu>
-  <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-     
-    </ion-content>
-  </div>
+  <div id="main-content"></div>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
