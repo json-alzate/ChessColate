@@ -1,11 +1,11 @@
 <ion-app>
-  <ion-menu [swipeGesture]="false" side="start" menuId="main-menu" contentId="main-content">
+  <ion-menu [swipeGesture]="false" side="start" menuId="main-menu" contentId="main-content" class="main-menu">
 
-    <div [attr.data-theme]="theme()" style="height: 100%; width: 100%;">
+    <div [attr.data-theme]="theme()" style="height: 100%; width: 100%; overflow: auto">
 
 
 
-      <div class="card bg-base-200 shadow-sm">
+      <div class="card">
         <div class="card-body">
 
           <div class="join join-vertical">
@@ -31,13 +31,118 @@
         </div>
       </div>
 
+      <!-- <ion-list>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img class="size-10" src="assets/images/icons/32px/castle.png" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Castillo</h2>
+          </ion-label>
+        </ion-item>
+      </ion-list> -->
 
 
-      <ul class="menu bg-base-200 w-full rounded-box shadow-md">
+      <ul class="menu w-full h-auto">
 
-        <!-- <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li> -->
 
-        <li >
+
+        <li>
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/castle.png" />
+              </div>
+            </div>
+            <div>
+              <h4>Castillo</h4>
+            </div>
+          </div>
+        </li>
+
+        <div class="divider"></div>
+
+        <li>
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/network-analysis.png" />
+              </div>
+            </div>
+            <div>
+              <h4>Análisis</h4>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/problem-solving.png" />
+              </div>
+            </div>
+            <div>
+              <h4 class="prose-lg">Puzzles</h4>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/check-list.png" />
+              </div>
+            </div>
+            <div>
+              <h4>Rutinas</h4>
+            </div>
+          </div>
+        </li>
+
+
+
+        <li>
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/crossed-checkered-flags.png" />
+              </div>
+            </div>
+            <div>
+              <h4>Puzzle Racer</h4>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/tyrannosaurus-rex.png" />
+              </div>
+            </div>
+            <div>
+              <h4>Dino-Ajedrez</h4>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/snake.png" />
+              </div>
+            </div>
+            <div>
+              <h4>Snake-Ajedrez</h4>
+            </div>
+          </div>
+        </li>
+
+        <li>
           <div>
             <div class="avatar">
               <div class="rounded">
@@ -46,57 +151,65 @@
             </div>
             <div>
               <h4>Coordenadas</h4>
-           </div>
+            </div>
           </div>
         </li>
 
-        <li >
-          <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/4@94.webp" /></div>
+ 
+
+        <li>
           <div>
-            <div>Ellie Beilish</div>
-            <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/strategy.png" />
+              </div>
+            </div>
+            <div>
+              <h4>Libros</h4>
+            </div>
           </div>
-          <button class="btn btn-square btn-ghost">
-            <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
-                <path d="M6 3L20 12 6 21 6 3z"></path>
-              </g>
-            </svg>
-          </button>
-          <button class="btn btn-square btn-ghost">
-            <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
-                <path
-                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
-                </path>
-              </g>
-            </svg>
-          </button>
         </li>
 
-        <li >
-          <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/3@94.webp" /></div>
+        <li>
           <div>
-            <div>Sabrino Gardener</div>
-            <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/podcast.png" />
+              </div>
+            </div>
+            <div>
+              <h4>Podcasts</h4>
+            </div>
           </div>
-          <button class="btn btn-square btn-ghost">
-            <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
-                <path d="M6 3L20 12 6 21 6 3z"></path>
-              </g>
-            </svg>
-          </button>
-          <button class="btn btn-square btn-ghost">
-            <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
-                <path
-                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
-                </path>
-              </g>
-            </svg>
-          </button>
         </li>
+
+
+        <li>
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/timer.png" />
+              </div>
+            </div>
+            <div>
+              <h4>Reloj</h4>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/domino.png" />
+              </div>
+            </div>
+            <div>
+              <h4>960</h4>
+            </div>
+          </div>
+        </li>
+
 
       </ul>
     </div>
