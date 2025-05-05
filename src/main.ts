@@ -11,7 +11,8 @@ import * as allIcons from 'ionicons/icons';
 import { environment } from '@environments/environment';
 
 /* NGRX */
-import { provideStore, provideState, provideStoreDevtools } from '@ngrx/store';
+import { provideStore, provideState } from '@ngrx/store';
+import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideEffects } from '@ngrx/effects';
 import { provideRouterStore, routerReducer } from '@ngrx/router-store';
 
