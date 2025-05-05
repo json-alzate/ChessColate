@@ -6,7 +6,7 @@ import { PiecesStyle, BoardStyle } from '@models/ui.model';
 export interface UIState {
     loading: boolean;
     toast: string | null;
-    typeToast: string;
+    typeToast: string | null;
     piecesStyle: PiecesStyle;
     boardStyle: BoardStyle;
     // TODO: sonidos
