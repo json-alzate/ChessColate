@@ -147,8 +147,11 @@ export class AuthService {
 
     let userCredential: UserCredential | void;
     if (this.platform.is('capacitor')) {
+      console.log('loginWithGoogleNative');
+      
       userCredential = await this.loginWithGoogleNative();
     } else {
+      console.log('loginWithGoogleWeb');
       userCredential = await this.loginWithGoogleWeb();
     }
   }
