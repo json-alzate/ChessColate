@@ -8,6 +8,7 @@ import {
     updateProfile,
     logOut
 } from '@store/actions/auth.actions';
+import { Profile } from '@models/profile.model';
 
 export const initialState: AuthState = {
     profile: null,
@@ -22,7 +23,7 @@ export const iauthReducer = createReducer(
 
 
     on(updateProfile, (state, { profile }) => (
-        { ...state, profile: { ...state.profile, ...profile } }
+        { ...state, profile: { ...state.profile, ...profile } as Profile }
     )),
 
     on(setErrorLogin, (state, { error }) => (

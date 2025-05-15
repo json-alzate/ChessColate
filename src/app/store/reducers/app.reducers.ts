@@ -28,7 +28,7 @@ export const appReducers: ActionReducerMap<AppState> = {
 export const metaReducers: MetaReducer<AppState>[] = !environment.production ? [] : [];
 
 export const clearStateMetaReducer =
-    <State extends unknown>(reducer: ActionReducer<State>): ActionReducer<State> => (state: State, action: Action) => {
+    <State extends unknown>(reducer: ActionReducer<State>): ActionReducer<State> => (state: State | undefined, action: Action) => {
         if (action.type === LOGOUT) {
             state = {} as State; // ==> Emptying state here
         }

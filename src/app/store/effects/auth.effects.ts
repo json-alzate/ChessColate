@@ -15,6 +15,7 @@ import {
 } from '@store/actions/auth.actions';
 
 
+
 import { AuthService } from '@services/auth.service';
 import { ProfileService } from '@services/profile.service';
 
@@ -41,8 +42,13 @@ export class AuthEffects {
         this.actions$.pipe(
             ofType(requestSingUpEmail),
             mergeMap((data) =>
+
+
                 from(this.authService.createUserWithEmailAndPassword(data.email, data.password)).pipe(
-                    mergeMap(() => [])
+                    mergeMap(() => []),
+                    catchError(() => merge([
+                        setErrorLogin({ error: 'RegisterError' })
+                    ]))
                 )
             )
         )
@@ -72,7 +78,8 @@ export class AuthEffects {
                     mergeMap(() => [])
                 )
             )
-        )
+        ),
+        { dispatch: false }
 
     );
 
@@ -104,7 +111,8 @@ export class AuthEffects {
                     ]))
                 )
             )
-        )
+        ),
+        { dispatch: false }
     );
 
     constructor(
