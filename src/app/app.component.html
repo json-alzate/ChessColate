@@ -6,8 +6,28 @@
 
 
       <div class="card">
-        <div class="card-body pb-0">
 
+
+
+
+        @if (profile$ | async; as profile) {
+
+        <div class="card-body p-2 pb-0">
+          <ul class="list rounded-box shadow-sm">
+            <li class="list-row flex items-center gap-2">
+              <div>
+                <img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp" />
+              </div>
+              <div class="text-wrap truncate overflow-hidden whitespace-nowrap">
+                <h6 class="prose-h1 truncate">{{profile?.email}}</h6>
+                <p class="text-xs font-semibold opacity-60">Perfil y estadísticas</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        } @else {
+        <div class="card-body pb-0">
           <div class="join join-vertical">
             <!-- Google -->
             <div class="btn btn-sm btn-primary  rounded-lg" (click)="loginWithGoogle()">
@@ -29,11 +49,13 @@
             </div>
           </div>
         </div>
+        }
+
       </div>
 
 
 
-      <ul class="menu w-full h-auto">
+      <ul class="menu w-full h-auto pt-0">
 
         <li>
           <div>
@@ -43,12 +65,25 @@
               </div>
             </div>
             <div>
-              <h4 class="prose-h1">Castillo</h4>
+              <h4 class="prose-h1">Castillos y dragones</h4>
             </div>
           </div>
         </li>
 
-        <div class="divider"></div>
+
+        <li>
+          <div>
+            <div class="avatar">
+              <div class="rounded">
+                <img class="size-10" src="assets/images/icons/32px/check-list.png" />
+              </div>
+            </div>
+            <div>
+              <h4>Rutinas</h4>
+            </div>
+          </div>
+        </li>
+
 
         <li>
           <div>
@@ -76,18 +111,6 @@
           </div>
         </li>
 
-        <li>
-          <div>
-            <div class="avatar">
-              <div class="rounded">
-                <img class="size-10" src="assets/images/icons/32px/check-list.png" />
-              </div>
-            </div>
-            <div>
-              <h4>Rutinas</h4>
-            </div>
-          </div>
-        </li>
 
 
 
@@ -143,7 +166,7 @@
           </div>
         </li>
 
- 
+
 
         <li>
           <div>

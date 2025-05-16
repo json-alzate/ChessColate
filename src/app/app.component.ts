@@ -1,17 +1,23 @@
 import { Component, Signal } from '@angular/core';
 import { IonApp, IonRouterOutlet, IonMenu } from '@ionic/angular/standalone';
 
+import { CommonModule } from '@angular/common';
+
+import { Observable } from 'rxjs';
+
 import { initializeApp } from 'firebase/app';
 import { environment } from '@environments/environment';
 
-import { Store } from '@ngrx/store';
+import { Store, select } from '@ngrx/store';
 import { AppState } from '@store/states/app.state';
 
 // actions
 import { requestLoginGoogle } from '@store/actions/auth.actions';
 
+import { getProfile } from '@store/selectors/auth.selectors';
 // models
 import { User as FirebaseUser } from 'firebase/auth';
+import { Profile } from '@models/profile.model';
 
 // services
 import { UiService } from '@services/ui.service';
@@ -22,11 +28,13 @@ import { ProfileService } from '@services/profile.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [IonApp, IonRouterOutlet, IonMenu],
+  imports: [IonApp, IonRouterOutlet, IonMenu, CommonModule],
+  
 })
 export class AppComponent {
 
   theme!: Signal<string>;
+  profile$: Observable<Profile | null>;
   constructor(
     private store: Store<AppState>,
     private uiService: UiService,
@@ -36,6 +44,10 @@ export class AppComponent {
   ) {
     this.theme = this.uiService.getTheme();
     this.initApp();
+        // Se escuchan los datos del usuario desde el store
+    this.profile$ = this.store.pipe(
+      select(getProfile)
+    );
   }
 
   async initApp() {
