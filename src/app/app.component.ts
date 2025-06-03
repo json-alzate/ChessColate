@@ -76,4 +76,8 @@ export class AppComponent {
     const action = requestLoginGoogle();
     this.store.dispatch(action);
   }
+
+  async openLoginModal() {
+    await this.uiService.openLoginModal();
+  }
 }

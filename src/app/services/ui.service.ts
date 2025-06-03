@@ -1,5 +1,10 @@
 import { Injectable, signal } from '@angular/core';
 
+import { ModalController } from '@ionic/angular/standalone';
+
+// Components
+import { LoginComponent } from '@shared/components/login/login.component';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -8,6 +13,10 @@ export class UiService {
   // Signal que almacena el nombre del tema actual
   private theme = signal<string>('light');
   // private theme = signal<string>('coffee');
+
+  constructor(
+    private modalController: ModalController
+  ) { }
   
   /**
    * Returns the current theme.
@@ -25,5 +34,12 @@ export class UiService {
    */
   setTheme(newTheme: string) {
     this.theme.set(newTheme);
+  }
+
+  async openLoginModal() {
+    const modal = await this.modalController.create({
+      component: LoginComponent
+    });
+    return await modal.present();
   }
 }

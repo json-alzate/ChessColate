@@ -3,18 +3,14 @@
 
     <div [attr.data-theme]="theme()" style="height: 100%; width: 100%; overflow: auto">
 
-
-
       <div class="card">
-
-
 
 
         @if (profile$ | async; as profile) {
 
         <div class="card-body p-2 pb-0">
           <ul class="list rounded-box shadow-sm">
-            <li class="list-row flex items-center gap-2">
+            <li class="list-row flex items-center gap-2" (click)="openLoginModal()">
               <div>
                 <img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp" />
               </div>
@@ -44,7 +40,7 @@
               Login with Google
             </div>
 
-            <div class="btn btn-sm  btn-ghost rounded-lg m-1">
+            <div class="btn btn-sm  btn-ghost rounded-lg m-1" (click)="openLoginModal()">
               Login with Email
             </div>
           </div>
