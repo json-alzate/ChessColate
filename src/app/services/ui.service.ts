@@ -11,8 +11,8 @@ import { LoginComponent } from '@shared/components/login/login.component';
 export class UiService {
 
   // Signal que almacena el nombre del tema actual
-  private theme = signal<string>('light');
-  // private theme = signal<string>('coffee');
+  // private theme = signal<string>('light');
+  private theme = signal<string>('coffee');
 
   constructor(
     private modalController: ModalController
